@@ -1,0 +1,137 @@
+/* styles.css */
+:root {
+  --primary-color: #1a1a2e;
+  --secondary-color: #16213e;
+  --accent-color: #0f3460;
+  --button-color: #e94560;
+  --button-hover-color: #d81e44;
+  --text-color: #f5f5f5;
+  --card-background: #222831;
+  --border-color: #393e46;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 20px;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.product-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.product-card {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  width: 240px;
+  text-align: center;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.product-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.product-card h2 {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  color: var(--text-color);
+}
+
+.product-card p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #bbbbbb;
+}
+
+button {
+  background-color: var(--button-color);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover-color);
+  transform: scale(1.1);
+}
+
+.shopping-cart {
+  margin-top: 30px;
+  padding-top: 10px;
+  border-top: 2px solid var(--border-color);
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: var(--card-background);
+  border-radius: 8px;
+}
+
+.total {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.pay-button {
+  background-color: var(--button-color);
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pay-button:hover {
+  background-color: var(--button-hover-color);
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .product-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+}
